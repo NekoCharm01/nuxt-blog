@@ -1,9 +1,11 @@
-export type BlogPost = {
+export type Post = {
+  id: number
+  authorId: number
   slug: string
   title: string
   excerpt: string
-  date: string
-  readingTime: string
   category: string
   content: string[]
+  createdAt: Date
+  updatedAt: Date
 }

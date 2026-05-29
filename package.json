@@ -14,6 +14,7 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
+    "@casl/ability": "^7.0.0",
     "@netlify/database": "^1.0.0",
     "@nuxtjs/i18n": "10.2.1",
     "@pinia/nuxt": "0.11.3",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@bg-dev/nuxt-naiveui": "^2.0.0",
     "@iconify-json/fa-solid": "^1.2.2",
+    "@types/node": "^25.9.1",
     "@unocss/extractor-pug": "^66.7.0",
     "@unocss/nuxt": "^66.7.0",
     "@vue/language-plugin-pug": "^3.3.1",

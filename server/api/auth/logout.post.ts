@@ -1,5 +1,5 @@
 export default defineEventHandler((event) => {
-  clearAccountSession(event)
-
-  return { ok: true }
+  setResponseStatus(event, 204)
+  setResponseHeader(event, 'Refresh', '0')
+  setResponseHeader(event, 'Clear-Site-Data', '"cookies", "storage", "cache"')
 })

@@ -1,4 +1,3 @@
-import type { AuthResponse } from '#shared/types/user'
 import { z } from 'zod'
 
 const schema = z.strictObject({
@@ -7,9 +6,9 @@ const schema = z.strictObject({
   password: z.string().min(8, 'Password must be at least 8 characters.'),
 })
 
-export default defineEventHandler(async (event): Promise<AuthResponse> => {
+export default defineEventHandler(async (event) => {
   const body = await readZodBody(event, schema)
-  const user = await registerUser(event, body)
+  const user = await registerUser(body)
 
   return { user }
 })
