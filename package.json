@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "dependencies": {
+    "@netlify/database": "^1.0.0",
+    "@nuxtjs/i18n": "10.2.1",
+    "@pinia/nuxt": "0.11.3",
+    "argon2": "^0.44.0",
+    "drizzle-orm": "1.0.0-beta.22",
+    "naive-ui": "^2.44.1",
+    "nuxt": "^4.4.6",
+    "pinia": "^3.0.4",
+    "uuid": "^14.0.0",
+    "vue": "^3.5.34",
+    "vue-router": "^4.6.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@bg-dev/nuxt-naiveui": "^2.0.0",
+    "@iconify-json/fa-solid": "^1.2.2",
+    "@unocss/extractor-pug": "^66.7.0",
+    "@unocss/nuxt": "^66.7.0",
+    "@vue/language-plugin-pug": "^3.3.1",
+    "drizzle-kit": "1.0.0-beta.22",
+    "oxfmt": "^0.47.0",
+    "oxlint": "^1.66.0",
+    "pug": "^3.0.4",
+    "sass-embedded": "^1.100.0",
+    "unocss": "^66.7.0"
+  },
+  "packageManager": "pnpm@11.4.0+sha512.f0febc7e37552ab485494a914241b338e0b3580b93d54ce31f00933015880863129038a1b4ae4e414a0ee63ac35bf21197e990172c4a68256450b5636310968f"
+}
