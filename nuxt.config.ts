@@ -12,6 +12,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    jwtSecretKey: 'your-secret-key',
+  },
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@bg-dev/nuxt-naiveui', '@pinia/nuxt', '@unocss/nuxt'],
   i18n: {

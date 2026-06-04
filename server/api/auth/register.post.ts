@@ -9,6 +9,7 @@ const schema = z.strictObject({
 export default defineEventHandler(async (event) => {
   const body = await readZodBody(event, schema)
   const user = await registerUser(body)
+  setUserSession(event, user.id)
 
   return { user }
 })

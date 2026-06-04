@@ -1,7 +1,8 @@
 import { AbilityBuilder, createMongoAbility } from '@casl/ability'
+import type { UserRole, UserPermission } from '#shared/types/user'
 
-export function defineAbilityFor(user: { role: string }) {
-  const { can, cannot, build } = new AbilityBuilder(createMongoAbility)
+export function defineAbilityFor(user: { id?: number; role: UserRole }) {
+  const { can, build } = new AbilityBuilder(createMongoAbility)
 
   switch (user.role) {
     case 'admin':
@@ -10,7 +11,8 @@ export function defineAbilityFor(user: { role: string }) {
     case 'editor':
       can('read', 'Post')
       can('create', 'Post')
-      can('update', 'Post')
+      can('update', 'Post', { authorId: user.id })
+      can('delete', 'Post', { authorId: user.id })
       break
     case 'viewer':
       can('read', 'Post')
@@ -20,4 +22,17 @@ export function defineAbilityFor(user: { role: string }) {
   }
 
   return build()
+}
+
+export function getPermissionsForRole(role: UserRole): UserPermission[] {
+  switch (role) {
+    case 'admin':
+      return ['posts:read', 'posts:create', 'posts:update', 'posts:delete', 'users:read']
+    case 'editor':
+      return ['posts:read', 'posts:create', 'posts:update', 'posts:delete']
+    case 'viewer':
+      return ['posts:read']
+    default:
+      return []
+  }
 }

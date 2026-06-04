@@ -20,27 +20,29 @@
     "@pinia/nuxt": "0.11.3",
     "argon2": "^0.44.0",
     "drizzle-orm": "1.0.0-beta.22",
+    "jsonwebtoken": "^9.0.3",
     "naive-ui": "^2.44.1",
-    "nuxt": "^4.4.6",
+    "nuxt": "^4.4.7",
     "pinia": "^3.0.4",
     "uuid": "^14.0.0",
-    "vue": "^3.5.34",
+    "vue": "^3.5.35",
     "vue-router": "^4.6.4",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@bg-dev/nuxt-naiveui": "^2.0.0",
     "@iconify-json/fa-solid": "^1.2.2",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.9.1",
     "@unocss/extractor-pug": "^66.7.0",
     "@unocss/nuxt": "^66.7.0",
-    "@vue/language-plugin-pug": "^3.3.1",
+    "@vue/language-plugin-pug": "^3.3.3",
     "drizzle-kit": "1.0.0-beta.22",
     "oxfmt": "^0.47.0",
-    "oxlint": "^1.66.0",
+    "oxlint": "^1.68.0",
     "pug": "^3.0.4",
     "sass-embedded": "^1.100.0",
     "unocss": "^66.7.0"
   },
-  "packageManager": "pnpm@11.4.0+sha512.f0febc7e37552ab485494a914241b338e0b3580b93d54ce31f00933015880863129038a1b4ae4e414a0ee63ac35bf21197e990172c4a68256450b5636310968f"
+  "packageManager": "pnpm@11.5.1+sha512.93f7b57422ea7068257235b4c16eb60762eb68e1dc23723199cc739043ea9be2c4143274a399d8c6defa2b1176226d9ca1c4b63482d6200c1a8fbaa78c1d1485"
 }
